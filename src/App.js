@@ -1,23 +1,25 @@
-import logo from './logo.svg';
 import './App.css';
+import artist from './data/artist';
 
 function App() {
+  let a = parseInt(prompt("Podaj a: "));
+  let b = parseInt(prompt("Podaj b: "));
+  let wiek = parseInt(prompt("Podaj wiek: "));
+  const rok = new Date().getFullYear();
+  console.log(rok);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+        <h1>Zadanie 1</h1>
+        <p>Suma: { a + b }</p>
+        <h1>Zadanie 2</h1>
+        <h1>Rok urodzenia: {rok - wiek}</h1>
+        <h1>Zadanie 3</h1>
+        <ul>
+          <li>Nick: {artist.nickname}</li>
+          <li>Imię: {artist.firstName}</li>
+          <li>Nazwisko: {artist.lastName}</li>
+          <li>Wiek: {artist.age}</li>
+        </ul>
     </div>
   );
 }
